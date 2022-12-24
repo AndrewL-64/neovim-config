@@ -16,6 +16,9 @@ This repository holds my Neovim configuration files. This Neovim configuration f
 ## Installation
 To install, you need a working version of Neovim. Take a look at the Neovim resources for building from [source](https://github.com/neovim/neovim/wiki/Building-Neovim). Once Neovim is installed, Create a folder called `nvim` in `~/.config/` and run `git clone https://github.com/AndrewL-64/neovim-config.git` in your `~/.config/nvim/` folder.
 
+### Debug Adapter Setup
+This configuration uses `nvim-dap` to set up debuggers. For the C/C++/Rust debug adapter, download the `cpptools` adapter following these [instructions](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(gdb-via--vscode-cpptools)), and move the extension folder to `~/.config/nvim/`.
+
 ## Notable Plugins
 - [Packer.nvim](https://github.com/wbthomason/packer.nvim): Lua-based plugin manager
 - [Nvim-Lspconfig](https://github.com/neovim/nvim-lspconfig): Helps with installing LSPs
@@ -27,6 +30,7 @@ To install, you need a working version of Neovim. Take a look at the Neovim reso
 - [Vim-fugitive](https://github.com/tpope/vim-fugitive): Vim wrapper for Git
 - [Vim-rhubarb](https://github.com/tpope/vim-rhubarb): Allows for Github integration within Neovim
 - [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): Fuzzy Finder for Nvim
+
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/70496262/209270717-dfab4b8f-3b5c-4d8c-8301-c2ecc3d0f6a5.png)
