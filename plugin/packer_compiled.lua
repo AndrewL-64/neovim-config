@@ -209,11 +209,6 @@ _G.packer_plugins = {
     path = "/home/aliu/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-hardtime"] = {
-    loaded = true,
-    path = "/home/aliu/.local/share/nvim/site/pack/packer/start/vim-hardtime",
-    url = "https://github.com/takac/vim-hardtime"
-  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/aliu/.local/share/nvim/site/pack/packer/start/vim-repeat",

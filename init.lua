@@ -24,7 +24,7 @@ require('packer').startup(function(use)
   }
 
   -- Vim Hardtime: Reduce reliance on hjkl
-  use { 'takac/vim-hardtime' }
+  -- use { 'takac/vim-hardtime' }
 
   use {
     'goolord/alpha-nvim',
