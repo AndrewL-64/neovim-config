@@ -409,7 +409,7 @@ end
 -- Setup mason so it can manage external tooling
 require('mason').setup()
 
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'sumneko_lua', 'hls'}
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'lua_ls'}
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -437,7 +437,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
