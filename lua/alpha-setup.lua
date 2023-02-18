@@ -175,7 +175,7 @@ local buttons = {
 		dashboard.button("f", "  Find file", "<cmd>Telescope find_files<CR>"),
 		-- dashboard.button("SPC F", "  Live grep"),
 		dashboard.button("c", "  Configuration", "<cmd>e ~/.config/nvim/init.lua <CR>"),
-		dashboard.button("u", "  Update plugins", "<cmd>PackerSync<CR>"),
+		dashboard.button("u", "  Update plugins", "<cmd>Lazy check<CR>"),
 		dashboard.button("q", "  Quit", "<cmd>qa<CR>"),
 	},
 	position = "center",
