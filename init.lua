@@ -43,7 +43,7 @@ require('lazy').setup({
 
   -- Neovim surround brackets
   {
-    'kylechui/nvim-surround', tag='*',
+    'kylechui/nvim-surround', version='*',
   },
 
   -- Motion plugin for ease of use
