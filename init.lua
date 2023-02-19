@@ -81,9 +81,6 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
--- Enable vim hardtine
-vim.g.hardtime_default_on = true
-
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -113,26 +110,25 @@ require('lualine').setup {
 -- Enable Comment.nvim
 require('Comment').setup()
 
--- Enable nvim-surround
-require('nvim-surround').setup()
--- Configure surround settings such that they don't conflict with leap.nvim
--- Taken from https://github.com/ggandor/leap.nvim/discussions/38
-vim.g["surround_no_mappings"] = 1
--- Just the defaults copied here.
-vim.keymap.set("n", "ds", "<Plug>Dsurround")
-vim.keymap.set("n", "cs", "<Plug>Csurround")
-vim.keymap.set("n", "cS", "<Plug>CSurround")
-vim.keymap.set("n", "ys", "<Plug>Ysurround")
-vim.keymap.set("n", "yS", "<Plug>YSurround")
-vim.keymap.set("n", "yss", "<Plug>Yssurround")
-vim.keymap.set("n", "ySs", "<Plug>YSsurround")
-vim.keymap.set("n", "ySS", "<Plug>YSsurround")
-
--- The conflicting ones. Note that `<Plug>(leap-cross-window)`
--- _does_ work in Visual mode, if jumping to the same buffer,
--- so in theory, `gs` could be useful for Leap too...
-vim.keymap.set("x", "gs", "<Plug>VSurround")
-vim.keymap.set("x", "gS", "<Plug>VgSurround")
+-- -- Configure surround settings such that they don't conflict with leap.nvim
+-- -- Taken from https://github.com/ggandor/leap.nvim/discussions/38
+-- vim.g["surround_no_mappings"] = 1
+--
+-- -- Just the defaults copied here.
+-- vim.keymap.set("n", "ds", "<Plug>Dsurround")
+-- vim.keymap.set("n", "cs", "<Plug>Csurround")
+-- vim.keymap.set("n", "cS", "<Plug>CSurround")
+-- vim.keymap.set("n", "ys", "<Plug>Ysurround")
+-- vim.keymap.set("n", "yS", "<Plug>YSurround")
+-- vim.keymap.set("n", "yss", "<Plug>Yssurround")
+-- vim.keymap.set("n", "ySs", "<Plug>YSsurround")
+-- vim.keymap.set("n", "ySS", "<Plug>YSsurround")
+--
+-- -- The conflicting ones. Note that `<Plug>(leap-cross-window)`
+-- -- _does_ work in Visual mode, if jumping to the same buffer,
+-- -- so in theory, `gs` could be useful for Leap too...
+-- vim.keymap.set("x", "gs", "<Plug>VSurround")
+-- vim.keymap.set("x", "gS", "<Plug>VgSurround")
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
@@ -157,22 +153,6 @@ require('gitsigns').setup {
   },
 }
 
--- [[ Configure Telescope ]]
--- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = require('telescope.actions').move_selection_previous,
-        ['<C-d>'] = require('telescope.actions').move_selection_next,
-      },
-    },
-  },
-}
-
--- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
-
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
@@ -183,7 +163,6 @@ vim.keymap.set('n', '<leader>/', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
-
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })

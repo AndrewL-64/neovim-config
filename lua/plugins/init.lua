@@ -7,12 +7,6 @@ return {
       require("which-key").setup()
     end,
   },
-
-  -- Neovim surround brackets
-  {
-    'kylechui/nvim-surround', version='*',
-  },
-
   -- Motion plugin for ease of use
   {
     'ggandor/leap.nvim',
@@ -46,11 +40,4 @@ return {
   'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
   'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-
-  -- Fuzzy Finder (files, lsp, etc)
-  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
-
-  -- Fuzzy Finder Algorithm which dependencies local dependencies to be built. Only load if `make` is available
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
-
 }
