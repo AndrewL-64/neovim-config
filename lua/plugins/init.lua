@@ -1,14 +1,6 @@
+
 return {
-  {
-    "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout= true
-      vim.o.timeoutlen = 300
-      require("which-key").setup()
-    end,
-  },
-  -- Motion plugin for ease of use
-  {
+  {  -- Motion plugin for ease of use
     'ggandor/leap.nvim',
     dependencies = {
       'tpope/vim-repeat'

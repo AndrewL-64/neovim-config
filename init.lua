@@ -43,6 +43,9 @@ vim.o.undofile = true
 -- Relative line number
 vim.o.relativenumber = true
 
+-- Font and font size
+vim.o.guifont = "Hack Nerd Font:h12"
+
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -53,12 +56,22 @@ vim.o.scrolloff = 8
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
+-- Clipboard
+vim.api.nvim_set_option("clipboard", "unnamedplus")
+
 -- Set colorscheme
 vim.o.termguicolors = true
 vim.cmd [[colorscheme gruvbox-material]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- Conceal markup in .norg files
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, { pattern = {"*.norg"}, command = "set conceallevel=3" })
+
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- [[ Basic Keymaps ]]
 
