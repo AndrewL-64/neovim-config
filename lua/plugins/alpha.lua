@@ -18,8 +18,8 @@ return {
    local if_nil = vim.F.if_nil
    
    local nvim_web_devicons = {
-   	enabled = true,
-   	highlight = true,
+     enabled = true,
+     highlight = true,
    }
    
    local function get_extension(fn)
@@ -174,6 +174,7 @@ return {
    		{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
    		{ type = "padding", val = 1 },
    		dashboard.button("e", "  New file", "<cmd>ene<CR>"),
+   		dashboard.button("r", "  Load Last Session", "<cmd>lua require('persistence').load({ last = true })<CR>"),
    		dashboard.button("f", "  Find file", "<cmd>Telescope find_files<CR>"),
    		-- dashboard.button("SPC F", "  Live grep"),
    		dashboard.button("c", "  Configuration", "<cmd>e ~/.config/nvim/init.lua <CR>"),

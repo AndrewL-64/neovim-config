@@ -14,6 +14,7 @@ return {
     wk.register({
       mode = { "n", "v"},
       ["<leader>s"] = { name = "+search" },
+      ["<leader>g"] = { name = "+git" },
     })
   end
 }

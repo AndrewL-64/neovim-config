@@ -5,6 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build" },
+    "zane-/cder.nvim",
   },
   config = function()
 
@@ -118,6 +119,11 @@ return {
         find_files = {
           hidden = true,
         },
+        live_grep = {
+          additional_args = function(opts)
+            return {"--hidden"}
+          end
+        },
       },
       extensions = {
         ["ui-select"] = {
@@ -158,8 +164,8 @@ return {
       preview = {
       }
     }
-
     telescope.load_extension("ui-select")
     telescope.load_extension("fzf")
+    telescope.load_extension('cder')
   end
 }

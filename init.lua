@@ -111,7 +111,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 
 -- Enable LazyGit
-vim.keymap.set('n', '<leader>g', '<Cmd>LazyGit<CR>', { desc = "LazyGit" })
+vim.keymap.set('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = "LazyGit", silent = true })
 
 -- See `:help lualine.txt`
 require('lualine').setup {
