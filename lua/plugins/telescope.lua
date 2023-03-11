@@ -122,7 +122,7 @@ return {
         live_grep = {
           additional_args = function(opts)
             return {"--hidden"}
-          end
+          end 
         },
       },
       extensions = {
@@ -164,6 +164,7 @@ return {
       preview = {
       }
     }
+
     telescope.load_extension("ui-select")
     telescope.load_extension("fzf")
     telescope.load_extension('cder')
