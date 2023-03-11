@@ -29,6 +29,9 @@ return {
         winblend = 0,
         color_devicons = true,
         layout_strategy = "horizontal",
+        file_ignore_patterns = {
+          "^.git/",
+        },
         layout_config = {
           horizontal = {
             prompt_position = "top",
@@ -112,6 +115,9 @@ return {
         -- }
         -- Now the picker_config_key will be applied every time you call this
         -- builtin picker
+        find_files = {
+          hidden = true,
+        },
       },
       extensions = {
         ["ui-select"] = {
