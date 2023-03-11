@@ -1,4 +1,4 @@
-eturn {
+return {
   "goolord/alpha-nvim", -- A fast and fully customizable greeter for neovim
   dependencies = {
     "nvim-tree/nvim-web-devicons",
