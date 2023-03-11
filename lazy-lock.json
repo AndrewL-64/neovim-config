@@ -9,6 +9,7 @@
   "gruvbox-material": { "branch": "master", "commit": "a0dc84816b913e9afcf6b8a5ade304bfb47a6f65" },
   "indent-blankline.nvim": { "branch": "master", "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399" },
   "lazy.nvim": { "branch": "main", "commit": "5b4444f0d7e556deba3f7ca949a2ba0e2c3369fb" },
+  "lazygit.nvim": { "branch": "main", "commit": "32bffdebe273e571588f25c8a708ca7297928617" },
   "leap.nvim": { "branch": "main", "commit": "dd4cabf7699ae8e2e17cfc29910ec605da32226d" },
   "lualine.nvim": { "branch": "master", "commit": "e99d733e0213ceb8f548ae6551b04ae32e590c80" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "a31e011135a79d63c71254c250c9158e1056a1cb" },
@@ -24,9 +25,7 @@
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "580b6c48651cabb63455e97d7e131ed557b8c7e2" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "62ea5e58c7bbe191297b983a9e7e89420f581369" },
   "telescope.nvim": { "branch": "master", "commit": "a3f17d3baf70df58b9d3544ea30abe52a7a832c2" },
-  "vim-fugitive": { "branch": "master", "commit": "5b52a0f395065d6cb7b65a00a5e17eaf9ebd64d5" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
-  "vim-rhubarb": { "branch": "master", "commit": "cad60fe382f3f501bbb28e113dfe8c0de6e77c75" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
   "which-key.nvim": { "branch": "main", "commit": "fb027738340502b556c3f43051f113bcaa7e8e63" }
 }

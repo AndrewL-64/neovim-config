@@ -23,9 +23,8 @@ return {
   },
 
   -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
   'lewis6991/gitsigns.nvim',
+  'kdheepak/lazygit.nvim', -- Configures LazyGit TUI inside Neovim
   -- 'navarasu/onedark.nvim', -- Theme inspired by Atom
   'sainnhe/gruvbox-material',
   'nvim-lualine/lualine.nvim', -- Fancier statusline
