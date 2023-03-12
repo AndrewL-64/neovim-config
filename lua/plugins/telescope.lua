@@ -32,6 +32,7 @@ return {
         layout_strategy = "horizontal",
         file_ignore_patterns = {
           "^.git/",
+          "node_modules",
         },
         layout_config = {
           horizontal = {
