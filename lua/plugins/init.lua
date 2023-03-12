@@ -1,10 +1,11 @@
 
 return {
-  {  -- Motion plugin for ease of use
-    'ggandor/leap.nvim',
-    dependencies = {
-      'tpope/vim-repeat'
-    },
+  {  -- Surround plugin
+    "kylechui/nvim-surround",
+    version = "*",
+    config = function ()
+      require("nvim-surround").setup()
+    end
   },
 
   { -- Autocompletion
