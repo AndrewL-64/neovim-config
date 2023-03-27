@@ -10,6 +10,8 @@ return {
     local fortune = require('alpha.fortune')
     dashboard.section.footer.val = fortune()
     local config = theme.config
+    -- Important! Changing directory when selecting a bookmark
+    theme.mru_opts.autocd = true
     -- Change buttons here
     local buttons = {
       type = "group",
