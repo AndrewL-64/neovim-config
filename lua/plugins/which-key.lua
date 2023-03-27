@@ -18,20 +18,6 @@ return {
         ["<leader>g"] = { name = "+git" },
         ["<leader>w"] = { name = "+workspace" },
       },
-      {
-        mode = { "n" },
-        ["y"] = { name = "+Add Surround" },
-        ["ys"] = { name = "Normal" },
-        ["yss"] = { name = "Current Line" },
-        ["yS"] = { name = "Normal w/ Newlines" },
-        ["ySS"] = { name = "Current Line w/ Newlines" },
-        ["ds"] = { name = "Surround" },
-        ["cs"] = { name = "Surround" },
-      },
-      {
-        mode = { "v" },
-        ["gS"] = { name = "Surround Line (Visual)" },
-      },
     })
   end
 }
