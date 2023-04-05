@@ -52,6 +52,9 @@ vim.o.smartcase = true
 
 vim.o.scrolloff = 8
 
+-- Turn show mode off since we are using lualine
+vim.o.showmode = false
+
 -- Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
@@ -116,10 +119,8 @@ vim.keymap.set('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = "LazyGit", silent
 -- See `:help lualine.txt`
 require('lualine').setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'gruvbox-material',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
   },
 }
 

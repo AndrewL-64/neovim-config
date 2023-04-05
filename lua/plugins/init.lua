@@ -28,7 +28,6 @@ return {
   'kdheepak/lazygit.nvim', -- Configures LazyGit TUI inside Neovim
   -- 'navarasu/onedark.nvim', -- Theme inspired by Atom
   'sainnhe/gruvbox-material',
-  'nvim-lualine/lualine.nvim', -- Fancier statusline
   'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
   'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
