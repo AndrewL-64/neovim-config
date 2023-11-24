@@ -26,6 +26,12 @@ require('lazy').setup('plugins')
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
+-- Set tabstop to 4 spaces
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 4 -- Number of spaces inserted instead of a tab
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
+
 -- Make line numbers default
 vim.wo.number = true
 
@@ -64,7 +70,7 @@ vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme gruvbox-material]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -116,14 +122,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Enable LazyGit
 vim.keymap.set('n', '<leader>gg', '<Cmd>LazyGit<CR>', { desc = "LazyGit", silent = true })
 
--- See `:help lualine.txt`
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'gruvbox-material',
-  },
-}
-
 -- Enable Comment.nvim
 require('Comment').setup()
 
@@ -146,14 +144,6 @@ require('Comment').setup()
 -- -- so in theory, `gs` could be useful for Leap too...
 -- vim.keymap.set("x", "gs", "<Plug>VSurround")
 -- vim.keymap.set("x", "gS", "<Plug>VgSurround")
-
--- Enable `lukas-reineke/indent-blankline.nvim`
--- See `:help indent_blankline.txt`
-require('indent_blankline').setup {
-  char = '┊',
-  show_trailing_blankline_indent = false,
-}
-
 
 -- Enable 'leap.nvim'
 -- require('leap').add_default_mappings()
@@ -185,12 +175,13 @@ vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { desc = '[F]ind current [W]ord' })
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = '[F]ind by [G]rep' })
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = '[F]ind [D]iagnostics' })
+vim.keymap.set('n', '<leader>fb', '<Cmd>Telescope file_browser <CR>', { desc = '[F]ile [B]rowser'})
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'dockerfile', 'javascript', 'html', 'css' },
 
   highlight = { enable = true },
   indent = { enable = true },
