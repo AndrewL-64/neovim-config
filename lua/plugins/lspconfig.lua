@@ -126,5 +126,25 @@ return {
         },
       },
     }
+
+    -- Disable diagnostics for python
+    -- require('lspconfig').pyright.setup {
+    --   -- on_attach = on_attach,
+    --   on_attach = function(client, buffer)
+    --     client.handlers["textDocument/publishDiagnostics"] = function(...) end
+    --     on_attach(client, buffer)
+    --   end,
+    --   capabilities = capabilities,
+    --   settings = {
+    --       python = {
+    --         analysis = {
+    --           autoSearchPaths = true,
+    --           diagnosticMode = 'workspace',
+    --           useLibraryCodeForTypes = true,
+    --           typeCheckingMode = 'off'
+    --         },
+    --       },
+    --     },
+    --   }
   end
 }
