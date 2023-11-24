@@ -4,6 +4,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-ui-select.nvim",
+    "nvim-telescope/telescope-file-browser.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build" },
   },
   config = function()
@@ -122,7 +123,7 @@ return {
         live_grep = {
           additional_args = function(opts)
             return {"--hidden"}
-          end 
+          end
         },
       },
       extensions = {
@@ -139,6 +140,10 @@ return {
               preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
             },
           }
+        },
+        file_browser = {
+          theme = "ivy",
+          hijack_netrw = true,
         },
         fzf = {
           --[[
@@ -167,5 +172,6 @@ return {
 
     telescope.load_extension("ui-select")
     telescope.load_extension("fzf")
+    telescope.load_extension("file_browser")
   end
 }
