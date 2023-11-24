@@ -1,10 +1,10 @@
 
 return {
   {  -- Surround plugin
-    "kylechui/nvim-surround",
-    version = "*",
+    'kylechui/nvim-surround',
+    version = '*',
     config = function ()
-      require("nvim-surround").setup()
+      require('nvim-surround').setup()
     end
   },
 
@@ -61,4 +61,6 @@ return {
       whitespace = { remove_blankline_trail = false }
     }
   },
+  'numToStr/Comment.nvim', -- 'gc' to comment visual regions/lines
+  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically,
 }
