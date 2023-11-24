@@ -23,6 +23,24 @@ return {
     }
   },
 
+  { -- LaTeX plugin, disable lazy-loading since vimtex is lazy loaded by default
+    'lervag/vimtex',
+    init = function ()
+      vim.g.vimtex_compiler_latexmk = {
+        options = {
+          '-shell-escape',
+          '-verbose',
+          '-file-line-error',
+          '-synctex=1',
+          '-interaction=nonstopmode'
+        },
+      }
+      vim.g.vimtex_view_general_viewer = 'okular'
+      vim.g.vimtex_view_general_options = '--unique file:@pdf\\#src:@line@tex'
+    end,
+    lazy = false,
+  },
+
   -- Git related plugins
   'lewis6991/gitsigns.nvim',
   'kdheepak/lazygit.nvim', -- Configures LazyGit TUI inside Neovim
