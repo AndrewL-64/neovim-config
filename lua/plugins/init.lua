@@ -41,12 +41,24 @@ return {
     lazy = false,
   },
 
+
+  'AckslD/swenv.nvim', -- Venv manager for Python
   -- Git related plugins
   'lewis6991/gitsigns.nvim',
   'kdheepak/lazygit.nvim', -- Configures LazyGit TUI inside Neovim
   -- 'navarasu/onedark.nvim', -- Theme inspired by Atom
-  'sainnhe/gruvbox-material',
-  'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
-  'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'sainnhe/gruvbox-material',
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
+    main = 'ibl',
+    opts = {
+      indent = { char = '┊' },
+      whitespace = { remove_blankline_trail = false }
+    }
+  },
 }
