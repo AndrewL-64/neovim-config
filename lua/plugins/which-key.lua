@@ -17,6 +17,10 @@ return {
         ["<leader>f"] = { name = "+find" },
         ["<leader>g"] = { name = "+git" },
         ["<leader>w"] = { name = "+workspace" },
+        ["<leader>d"] = { name = "+document" },
+        ["<leader>r"] = { name = "+rename" },
+        ["<leader>c"] = { name = "+code" },
+        ["<leader>v"] = { name = "+virtual env" },
       },
     })
   end
