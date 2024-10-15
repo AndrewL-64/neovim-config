@@ -35,6 +35,9 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 -- Make line numbers default
 vim.wo.number = true
 
+-- Color line for vertical line length
+vim.o.colorcolumn = '132'
+
 -- Disable mouse mode
 vim.o.mouse = ''
 -- vim.cmd.aunmenu{'PopUp.How-to\\ disable\\ mouse'}
@@ -65,12 +68,19 @@ vim.o.showmode = false
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
+-- Stop adding newline to end of files (Windows)
+vim.o.fixeol = false
+vim.o.fixendofline = false
+
+-- Set line feed to LF
+vim.o.fileformats = 'unix,dos'
+
 -- Clipboard
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme catppuccin-mocha]]
+-- vim.cmd [[colorscheme catppuccin-mocha]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

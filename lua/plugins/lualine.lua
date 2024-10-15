@@ -6,7 +6,7 @@ return { -- Customizing the statusline
   config = function ()
     require('lualine').setup {
       options = {
-        theme = 'catppuccin-mocha',
+        theme = 'auto',
         component_separators = '|',
         section_separators = { left = '', right = '' },
       },

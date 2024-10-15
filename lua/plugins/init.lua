@@ -20,7 +20,23 @@ return {
     end,
     dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    }
+    },
+    config = function ()
+      require('nvim-treesitter').setup {
+        indent = {
+          enable = true
+        }
+      }
+    end
+  },
+  {
+    'vague2k/huez.nvim',
+    import = 'huez-manager.import',
+    branch = 'stable',
+    event = 'UIEnter',
+    config = function ()
+      require('huez').setup({})
+    end
   },
 
   { -- LaTeX plugin, disable lazy-loading since vimtex is lazy loaded by default
@@ -40,9 +56,6 @@ return {
     end,
     lazy = false,
   },
-
-
-  'AckslD/swenv.nvim', -- Venv manager for Python
   -- Git related plugins
   'lewis6991/gitsigns.nvim',
   'kdheepak/lazygit.nvim', -- Configures LazyGit TUI inside Neovim

@@ -5,22 +5,23 @@ return {
     vim.o.timeout= true
     vim.o.timeoutlen = 300
     wk.setup {
-      key_labels = {
-        ["<space>"] = "SPC",
-        ["<tab>"] = "TAB",
-        ["<cr>"] = "RET",
+      replace = {
+        {"<space>", "SPC" },
+        {"<tab>", "TAB" },
+        {"<cr>", "RET" },
       }
     }
-    wk.register({
+    wk.add(
+    {
       {
         mode = { "n", "v"},
-        ["<leader>f"] = { name = "+find" },
-        ["<leader>g"] = { name = "+git" },
-        ["<leader>w"] = { name = "+workspace" },
-        ["<leader>d"] = { name = "+document" },
-        ["<leader>r"] = { name = "+rename" },
-        ["<leader>c"] = { name = "+code" },
-        ["<leader>v"] = { name = "+virtual env" },
+        { "<leader>f", group = "find" },
+        { "<leader>g", group = "git" },
+        { "<leader>w", group = "workspace" },
+        { "<leader>d", group = "document" },
+        { "<leader>r", group = "rename" },
+        { "<leader>c", group = "code" },
+        { "<leader>v", group = "virtual env" },
       },
     })
   end

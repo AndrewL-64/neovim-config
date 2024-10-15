@@ -12,6 +12,10 @@ return {
     local config = theme.config
     -- Important! Changing directory when selecting a bookmark
     theme.mru_opts.autocd = true
+    local configStr = "~/.config/nvim/"
+    if vim.loop.os_uname().sysname ~= "Linux" then
+      configStr = [[%%HOMEDRIVE%%%%HOMEPATH%%\AppData\Local\nvim\]]
+    end
     -- Change buttons here
     local buttons = {
       type = "group",
@@ -22,7 +26,7 @@ return {
         dashboard.button("r", "  Load Last Session", "<cmd>lua require('persistence').load({ last = true })<CR>"),
         dashboard.button("f", "  Find file", "<cmd>Telescope find_files<CR>"),
         -- dashboard.button("SPC F", "  Live grep"),
-        dashboard.button("c", "  Configuration", "<cmd>cd ~/.config/nvim/ | edit init.lua<CR>"),
+        dashboard.button("c", "  Configuration", "<cmd>cd " .. configStr .. " | edit init.lua<CR>"),
         dashboard.button("u", "  Update plugins", "<cmd>Lazy check<CR>"),
         dashboard.button("q", "  Quit", "<cmd>qa<CR>"),
       },
